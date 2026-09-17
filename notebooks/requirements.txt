@@ -1,0 +1,5 @@
+# Optional. The laptop demo only needs backend/requirements.txt.
+# Install this extra file if you want to open the .ipynb walkthroughs.
+jupyter>=1.0
+ipykernel>=6.29
+matplotlib>=3.8

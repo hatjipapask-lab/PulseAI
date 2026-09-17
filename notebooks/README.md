@@ -1,40 +1,20 @@
-# Notebooks — Proof-of-Concept Implementation
+# Notebooks — proof of concept
 
-> This folder is **optional** but evaluated positively if present.
+These notebooks describe and call the **ValveGuard** engine. They do not reimplement PulseAI, do not use XGBoost/SHAP, and do not claim clinical performance.
 
-Place your Jupyter notebooks here. A strong submission includes:
+This Dyania fork contains **documents and notebooks only**. To execute them, clone:
 
-- Data loading and exploratory analysis
-- Feature engineering pipeline
-- Model training and evaluation
-- SHAP / feature importance visualisation
+https://github.com/hatjipapask-lab/ValveGuard
 
-## Suggested Notebook Structure
+Then install `backend/requirements.txt` and `notebooks/requirements.txt` in that repository.
 
-```
-notebooks/
-├── 01_eda.ipynb                 # Exploratory data analysis on your chosen dataset
-├── 02_feature_engineering.ipynb # Feature construction (gradient progression rate, EOA index, PPM flag, etc.)
-├── 03_model_training.ipynb      # Model training, cross-validation, hyperparameter tuning
-└── 04_evaluation.ipynb          # Metrics, calibration, SHAP plots, subgroup analysis
-```
+## What is here
 
-You can combine these into a single notebook if preferred — the split is just for readability.
+| Notebook | What it is for |
+|---|---|
+| `00_deploy_demo.ipynb` | Start the loopback API and static UI |
+| `01_data_contract.ipynb` | Tensor contract and label audit |
+| `02_five_tier_engine.ipynb` | Tiers 1–5 on synthetic showcases |
+| `03_metrics_safety.ipynb` | Technical metrics and fail-closed Stage 3 |
 
-## Environment
-
-Document your dependencies here so the panel can reproduce your results:
-
-```
-python >= 3.10
-pandas
-numpy
-scikit-learn
-xgboost       # or your chosen framework
-lifelines     # or scikit-survival, for time-to-event modelling
-shap
-matplotlib
-jupyter
-```
-
-Or include a `requirements.txt` / `environment.yml` in this folder.
+No patient workbooks are included in this public repository.
